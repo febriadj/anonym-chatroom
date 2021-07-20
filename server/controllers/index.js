@@ -1,6 +1,6 @@
 exports.message = (io, socket) => {
-  socket.on('new_message', ({ username, time, message }) => {
-    io.emit('new_message', {
+  socket.on('newMessage', ({ username, time, message }) => {
+    io.emit('showNewMessage', {
       username, time, message,
     });
   });
