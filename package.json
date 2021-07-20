@@ -5,7 +5,7 @@
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
-    "start-dev": "nodemon src/server.js"
+    "start-dev": "concurrently \"nodemon src/server.js\" \"sass --watch src/public/styles/index.scss:src/public/styles/index.css\""
   },
   "repository": {
     "type": "git",
@@ -26,9 +26,11 @@
     "eslint": "^7.31.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.23.4",
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "sass": "^1.35.2"
   },
   "dependencies": {
+    "concurrently": "^6.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.13.3",
     "pug": "^3.0.2",
