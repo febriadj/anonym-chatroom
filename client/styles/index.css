@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  line-height: 1.2rem;
+  background-color: #f4f9ff;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  background: #fff;
+  box-shadow: 0 0 30px #e5ebf1, 0 0 10px #e5ebf1;
+}
+.app .app-wrap {
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.app .app-wrap .header .header_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 15px 0;
+  border-bottom: 1px solid #808080;
+}
+.app .app-wrap .header .header_wrap .logout_btn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.app .app-wrap .send {
+  width: 100%;
+}
+.app .app-wrap .send .send_wrap {
+  height: 50px;
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  gap: 20px;
+}
+.app .app-wrap .send .send_wrap #send_input {
+  background-color: #eaebf1;
+  border-radius: 1.5rem;
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+}
+.app .app-wrap .send .send_wrap #send_btn {
+  border: none;
+  outline: none;
+  background-color: #eaebf1;
+  border-radius: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+.app .app-wrap .screen {
+  width: 340px;
+  height: 60vh;
+  overflow-y: auto;
+}
+.app .app-wrap .screen .screen_wrap {
+  padding: 20px 40px 40px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: flex-end;
+}
+.app .app-wrap .screen .screen_wrap .chat_box {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  font-size: 0.85rem;
+}
+.app .app-wrap .screen .screen_wrap .chat_box .chat_dot {
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #dedfe4;
+  border-radius: 50%;
+  z-index: 1;
+}
+.app .app-wrap .screen .screen_wrap .chat_box .chat_msg {
+  position: relative;
+  background-color: #f6f9fd;
+  padding: 5px 15px 10px 15px;
+  border-radius: 0 1rem 1rem 1rem;
+  transform: translate(20px, 10px);
+}
+.app .app-wrap .screen .screen_wrap .chat_box .chat_msg .chat_username {
+  font-size: 0.8rem;
+  margin: 0 0 5px 0;
+  font-weight: 600;
+}
+.app .app-wrap .screen .screen_wrap .chat_box .chat_msg .chat_time {
+  position: absolute;
+  right: 0;
+  font-size: 0.7rem;
+  background-color: #fff;
+  border-radius: 1rem 0 0 0;
+  padding: 5px 0 0 10px;
+}
+.app .app-wrap .screen::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+}
+.app .app-wrap .screen::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 2rem;
+}
+
+/*# sourceMappingURL=index.css.map */
