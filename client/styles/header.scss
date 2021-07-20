@@ -1,3 +1,5 @@
+$font: 'Roboto', sans-serif;
+
 .header {
   .header_wrap {
     display: flex; justify-content: space-between; align-items: center;
@@ -6,6 +8,7 @@
     .logout_btn {
       border: none; outline: none;
       background-color: transparent;
+      font-family: $font;
     }
   }
 }
