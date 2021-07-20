@@ -4,8 +4,8 @@
   "description": "aplikasi ruang obrolan secara realtime menggunakan socket.io",
   "main": "src/server.js",
   "scripts": {
-    "start": "node src/server.js",
-    "start-dev": "concurrently \"nodemon src/server.js\" \"sass --watch src/public/styles/index.scss:src/public/styles/index.css\""
+    "start": "node server/server.js",
+    "start-dev": "concurrently \"nodemon server/server.js\" \"sass --watch client/styles/index.scss:client/styles/index.css\""
   },
   "repository": {
     "type": "git",
