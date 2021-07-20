@@ -1,4 +1,3 @@
-const socket = io();
 const screenWrap = document.getElementsByClassName('screen_wrap');
 
 function chatBoxElement(args) {
@@ -14,6 +13,6 @@ function chatBoxElement(args) {
   screenWrap[0].innerHTML += element;
 }
 
-socket.on('new_message', (args) => {
+socket.on('showNewMessage', (args) => {
   chatBoxElement(args);
 });

@@ -6,7 +6,7 @@ function emitMessage() {
   const username = window.localStorage.getItem('username');
   const time = new Date();
 
-  socket.emit('new_message', {
+  socket.emit('newMessage', {
     username,
     time: time.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' }),
     message: sendInput.value,
