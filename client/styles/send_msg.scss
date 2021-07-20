@@ -7,7 +7,7 @@ $font: 'Roboto', sans-serif;
     display: grid; grid-template-columns: 1fr 80px; gap: 20px;
     #send_input {
       background-color: #eaebf1;
-      border-radius: 1.5rem;
+      border-radius: 2rem;
       border: none; outline: none;
       padding: 20px;
       font-family: $font;
@@ -15,7 +15,7 @@ $font: 'Roboto', sans-serif;
     #send_btn {
       border: none; outline: none;
       background-color: #eaebf1;
-      border-radius: 1.5rem;
+      border-radius: 2rem;
       font-family: $font;
       cursor: pointer;
     }

@@ -9,6 +9,10 @@ $font: 'Roboto', sans-serif;
       border: none; outline: none;
       background-color: transparent;
       font-family: $font;
+      background-color: #eaebf1;
+      border-radius: 2rem;
+      padding: 10px 15px;
+      cursor: pointer;
     }
   }
 }
