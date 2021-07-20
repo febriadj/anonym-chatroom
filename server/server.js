@@ -7,6 +7,8 @@ const io = require('socket.io')(http);
 
 const port = process.env.PORT ?? 3000;
 
+const { message } = require('./controllers');
+
 app.set('views', 'client/views');
 app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname, '..', 'client')));
@@ -14,13 +16,7 @@ app.use(express.static(path.join(__dirname, '..', 'client')));
 app.get('/', (req, res) => res.render('index'));
 
 io.on('connection', (socket) => {
-  socket.on('new_message', (args) => {
-    const { username, time, message } = args;
-
-    io.emit('new_message', {
-      username, time, message,
-    });
-  });
+  message(io, socket);
 });
 
 http.listen(port);
