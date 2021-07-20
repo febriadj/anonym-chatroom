@@ -4,16 +4,24 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     link(rel="stylesheet", href="./styles/index.css")
 
     script(src="/socket.io/socket.io.js") 
     title ChatRoom
   body 
+    include components/createUser.pug
+    
     div(class="app")
       div(class="app-wrap")
         include components/header.pug
         include components/screen.pug
-        include components/send_msg.pug
+        include components/sendMessage.pug
 
+script(type="text/javascript").
+  const socket = io();
+
+script(src="./javascript/createUser.js") 
+script(src="./javascript/header.js") 
 script(src="./javascript/screen.js") 
 script(src="./javascript/send_msg.js")
