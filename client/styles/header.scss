@@ -2,9 +2,18 @@ $font: 'Roboto', sans-serif;
 
 .header {
   .header_wrap {
-    display: flex; justify-content: space-between; align-items: center;
+    display: flex; justify-content: space-between; align-items: flex-start;
     padding: 0 0 15px 0;
     border-bottom: 1px solid #808080;
+    .header_action {
+      display: grid; grid-template-columns: 1fr; gap: 10px;
+      .header_username {
+        font-weight: 600;
+      }
+      .users_online {
+        font-size: 0.8rem;
+      }
+    }
     .logout_btn {
       border: none; outline: none;
       background-color: transparent;

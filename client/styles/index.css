@@ -85,9 +85,20 @@ body {
 .app .app-wrap .header .header_wrap {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 0 0 15px 0;
   border-bottom: 1px solid #808080;
+}
+.app .app-wrap .header .header_wrap .header_action {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.app .app-wrap .header .header_wrap .header_action .header_username {
+  font-weight: 600;
+}
+.app .app-wrap .header .header_wrap .header_action .users_online {
+  font-size: 0.8rem;
 }
 .app .app-wrap .header .header_wrap .logout_btn {
   border: none;
@@ -153,7 +164,6 @@ body {
 }
 .app .app-wrap .screen .screen_wrap .chat_box .chat_msg {
   position: relative;
-  background-color: #f6f9fd;
   padding: 5px 15px 10px 15px;
   border-radius: 0 1rem 1rem 1rem;
   transform: translate(20px, 10px);
