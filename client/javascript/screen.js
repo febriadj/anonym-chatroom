@@ -1,8 +1,8 @@
 const screenWrap = document.getElementsByClassName('screen_wrap');
 
 function chatBoxElement(args) {
-  const ifYou = localStorage.getItem('username');
-  const boxColorIfItsYou = ifYou === args.username ? '#ffe8d6' : '#f6f9fd';
+  const idUser = localStorage.getItem('ID');
+  const boxColorIfItsYou = idUser === args.idUser ? '#ffe8d6' : '#f6f9fd';
 
   const element = `<div class="chat_box">
     <span class="chat_dot"></span>

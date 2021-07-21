@@ -1,7 +1,12 @@
 exports.message = (io, socket) => {
-  socket.on('newMessage', ({ username, time, message }) => {
+  socket.on('newMessage', ({
+    idUser,
+    username,
+    time,
+    message,
+  }) => {
     io.emit('showNewMessage', {
-      username, time, message,
+      idUser, username, time, message,
     });
   });
 }

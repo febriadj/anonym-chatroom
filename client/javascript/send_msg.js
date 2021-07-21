@@ -3,10 +3,12 @@ const sendInput = document.getElementById('send_input');
 const sendBtn = document.getElementById('send_btn');
 
 function emitMessage() {
-  const username = window.localStorage.getItem('username');
+  const idUser = localStorage.getItem('ID');
+  const username = localStorage.getItem('Username');
   const time = new Date();
 
   socket.emit('newMessage', {
+    idUser,
     username,
     time: time.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' }),
     message: sendInput.value,

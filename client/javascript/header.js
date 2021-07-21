@@ -12,14 +12,14 @@ const headerUsername = document.getElementsByClassName('header_username');
 const logoutBtn = document.getElementsByClassName('logout_btn');
 
 function showNameOnHeader() {
-  const username = localStorage.getItem('username');
+  const username = localStorage.getItem('Username');
   headerUsername[0].innerHTML = username;
 }
 
 showNameOnHeader();
 
 logoutBtn[0].addEventListener('click', () => {
-  localStorage.removeItem('username');
+  localStorage.clear();
 
   window.location.reload(true);
 });
