@@ -16,7 +16,15 @@ app.use(express.static(path.join(__dirname, '..', 'client')));
 app.get('/', (req, res) => res.render('index'));
 
 io.on('connection', (socket) => {
+  io.emit('userConnected', {
+    online: io.engine.clientsCount,
+  });
+
   message(io, socket);
+
+  socket.on('disconnect', () => {
+    io.emit('userDisconnect', io.engine.clientsCount);
+  });
 });
 
 http.listen(port);
