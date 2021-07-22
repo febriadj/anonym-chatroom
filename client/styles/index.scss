@@ -6,28 +6,40 @@ $font: 'Roboto', sans-serif;
   padding: 0;
   margin: 0;
 }
+button, input {
+  border: none; outline: none;
+  font-family: $font;
+}
 
 body {
   line-height: 1.2rem;
   background-color: #f4f9ff;
   font-family: $font;
   font-size: 15px;
-  position: absolute;
-  width: 100%; height: 100%;
-  display: flex; justify-content: center; align-items: center;
 }
 
 @import 'createUser.scss';
 
 .app {
-  background: #fff;
-  box-shadow: 0 0 30px #e5ebf1, 0 0 10px #e5ebf1;
-  .app-wrap {
+  position: absolute;
+  width: 100%; height: 100%;
+  display: flex; justify-content: center; align-items: center;
+  .app_wrap {
+    width: 450px; height: 100%;
     @import 'header.scss';
     @import 'send_msg.scss';
     @import 'screen.scss';
     
-    padding: 30px 20px;
-    display: flex; flex-direction: column;
+    display: grid; grid-template-rows: auto 1fr auto;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .app {
+    .app_wrap {
+      width: 100%;
+
+      .header, .screen, .send { margin: 0; }
+    }
   }
 }

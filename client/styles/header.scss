@@ -1,6 +1,9 @@
 $font: 'Roboto', sans-serif;
 
 .header {
+  margin: 40px 20px 0 20px;
+  padding: 20px 20px 0 20px;
+  background: #fff;
   .header_wrap {
     display: flex; justify-content: space-between; align-items: flex-start;
     padding: 0 0 15px 0;
