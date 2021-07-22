@@ -10,6 +10,17 @@ if (localStorage.getItem('Username') !== null) {
 function handleSubmit() {
   const username = inputUsername[0].value;
 
+  if (username.length < 1) {
+    const errNotif = `<div class="error_notif">
+      <p>Kamu Harus Memiliki Nama</p>
+    </div>`;
+
+    createBox[0].innerHTML += errNotif;
+    setTimeout(() => window.location.reload(true), 3000);
+
+    return false;
+  }
+
   if (username.length < 3) {
     const errNotif = `<div class="error_notif">
       <p>Nama Kamu Terlalu Pendek</p>
