@@ -13,10 +13,10 @@ html(lang="en")
     include components/createUser.pug
     
     div(class="app")
-      div(class="app-wrap")
-        include components/header.pug
-        include components/screen.pug
-        include components/sendMessage.pug
+      div(class="app_wrap")
+          include components/header.pug
+          include components/screen.pug
+          include components/sendMessage.pug
 
 script(type="text/javascript").
   const socket = io();
@@ -24,4 +24,4 @@ script(type="text/javascript").
 script(src="./javascript/createUser.js") 
 script(src="./javascript/header.js") 
 script(src="./javascript/screen.js") 
-script(src="./javascript/send_msg.js")
+script(src="./javascript/sendMessage.js")
